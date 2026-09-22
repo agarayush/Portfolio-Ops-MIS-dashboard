@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Capitar — Portfolio Operations &amp; MIS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="brand">
+        <span class="brand-mark">C</span>
+        <span class="brand-name">CAPITAR</span>
+      </div>
+      <p class="brand-sub">Portfolio, Fundraising &amp; Deployment</p>
+
+      <nav class="nav" id="nav">
+        <button class="nav-item active" data-view="home">Home</button>
+        <button class="nav-item" data-view="portfolio">Portfolio</button>
+        <button class="nav-item" data-view="pipeline">Pipeline</button>
+        <button class="nav-item" data-view="investors">Investors</button>
+        <button class="nav-item" data-view="data">Data Inputs</button>
+      </nav>
+
+      <div class="sidebar-foot">
+        <div class="unit-toggle" id="unitToggle">
+          <span class="unit-toggle-label">Units</span>
+          <div class="seg">
+            <button class="seg-btn active" data-unit="lakh">₹ Lakh</button>
+            <button class="seg-btn" data-unit="cr">₹ Cr</button>
+          </div>
+        </div>
+        <p class="proto-tag">Prototype · sample data</p>
+      </div>
+    </aside>
+
+    <!-- Main -->
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <h1 class="topbar-title" id="viewTitle">Home</h1>
+          <p class="topbar-sub" id="viewSub">Portfolio, fundraising and deployment — one glance across all of it</p>
+        </div>
+        <button class="alerts-btn" id="alertsBtn">
+          <span class="alerts-dot" id="alertsCount">0</span>
+          Alerts
+        </button>
+      </header>
+
+      <div class="view-scroll">
+        <section id="view-home"      class="view active"></section>
+        <section id="view-portfolio" class="view"></section>
+        <section id="view-pipeline"  class="view"></section>
+        <section id="view-investors" class="view"></section>
+        <section id="view-data"      class="view"></section>
+      </div>
+    </main>
+
+    <!-- Alerts drawer -->
+    <div class="drawer-scrim" id="drawerScrim"></div>
+    <aside class="drawer" id="alertsDrawer">
+      <div class="drawer-head">
+        <h2>Alerts</h2>
+        <button class="drawer-close" id="drawerClose">&times;</button>
+      </div>
+      <div class="drawer-body" id="alertsList"></div>
+    </aside>
+
+  </div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
